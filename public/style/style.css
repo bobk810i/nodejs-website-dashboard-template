@@ -1,0 +1,319 @@
+:root{
+    --cardsShadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    --checkColor: #2563EB;
+    --uncheckColor: #ced4da;
+    --playColor: #ff0033;
+
+    --notowanieUp: #00cc66;
+    --notowanieDown: #b30000;
+}
+
+.menu-shadow{
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal_container{
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 160px;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-song-delete{
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.add-song-delete:hover{
+    transform: translateY(-2px);
+}
+
+.voting-container{
+    /* background-color: #eff6ff; */
+    background-color: white;
+    width: 60%;
+    margin-top: 100px;
+    border-radius: 10px;
+    box-shadow: var(--cardsShadow);
+}
+
+.voting-header{
+    width: 100%;
+}
+
+.voting-songs-container{
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#songs-list-container{
+    list-style: none;
+    padding: 0;
+}
+
+.songs-list-item{
+    display: flex;
+    padding: 10px;
+    border-radius: 0.375rem;
+    transition: 0.2s ease;
+    flex: 1;
+    align-items: center;
+}
+
+.songs-list-item-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.play-btn{
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.2s ease;
+}
+
+.play-btn:hover{
+    color: var(--playColor);
+}
+
+.item-unecheked{
+    border: 1px solid var(--uncheckColor);
+    color: black;
+}
+
+.item-checked{
+    border: 1px solid var(--checkColor);
+    color:var(--checkColor);
+}
+
+.songs-list-item-check{
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.icon-unchecked{
+    color: var(--uncheckColor);
+}
+
+.icon-checked{
+    color: var(--checkColor);
+}
+
+.inactive-container{
+    background-color: white;
+    box-shadow: var(--cardsShadow);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.songs-counter-container{
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    background-color: white;
+    box-shadow: var(--cardsShadow);
+    border-radius: 10px;
+}
+
+.dt-buttons{
+    text-align: left !important;
+}
+
+.dt-button{
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #17a2b8;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #17a2b8;
+    border-radius: 0.375rem;
+    transition: 0.15s ease;
+}
+
+.dt-button:hover{
+    color: black;
+    background-color: #17a2b8;
+}
+
+.counter-match{
+    font-weight: bold !important;
+    color: #5cb85c;
+
+}
+
+.counter-over{
+    font-weight: bold !important;
+    color: #d9534f;
+}
+
+/* .songs-card{
+    max-height: 90vh;
+    overflow-y: auto;
+} */
+
+.card{
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.info-numbers-container{
+    width: 100%;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.info-number-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    flex: 1;
+    text-align: center;
+}
+
+.info-number-box-border{
+    /* border-left: 1px solid var(--uncheckColor); */
+    border-right: 1px solid var(--uncheckColor);
+}
+
+.info-number-box-border-mb{
+    /* border-left: 1px solid var(--uncheckColor); */
+    border-right: 1px solid var(--uncheckColor);
+}
+
+.notowanie-lista-container{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notowanie-lista-element{
+    padding: 1.2rem;
+    border-bottom: 1px solid var(--uncheckColor);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notowanie-lista-element p{
+    margin: 0;
+}
+
+.notowanie-lista-textfield{
+    flex: 1;
+    padding: 0 1.2rem;
+}
+
+.overview-list-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.list-item{
+    position: relative;
+    display: flex;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: transparent;
+    border: 1px solid var(--uncheckColor);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-item-name{
+    flex: 1;
+    margin: 0   ;
+}
+
+.list-item i{
+    cursor: pointer;
+}
+
+.list-item-active{
+    color: rgb(67, 161, 67);
+}
+
+.wyniki-modal-container{
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#wyniki-modal-other-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.wyniki-modal-card{
+    width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+    .voting-container{
+        width: 90%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .voting-header{
+        padding: 20px !important;
+    }
+
+    .voting-songs-container{
+        padding: 20px !important;
+    }
+
+    .songs-counter-container{
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .info-numbers-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-number-box-border-mb{
+        border-right: none;
+    }
+
+    .wyniki-modal-card{
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .voting-container{
+        width: 50%;
+    }
+}

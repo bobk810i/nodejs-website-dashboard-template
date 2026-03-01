@@ -12,3 +12,6 @@ Includes custom logs module.
 
 **Authentication:**
 - passport
+
+> Initial authentication credentials
+`admin | 123456789`
